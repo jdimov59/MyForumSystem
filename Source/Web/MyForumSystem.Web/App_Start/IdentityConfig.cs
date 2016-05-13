@@ -11,6 +11,8 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using MyForumSystem.Web.Models;
+using MyForumSystem.Data.Models;
+using MyForumSystem.Data;
 
 namespace MyForumSystem.Web
 {
