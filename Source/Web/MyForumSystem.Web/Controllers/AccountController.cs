@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using MyForumSystem.Web.Models;
+using MyForumSystem.Data.Models;
 
 namespace MyForumSystem.Web.Controllers
 {
