@@ -1,0 +1,7 @@
+1. class AuditInfo - ще ни позволява да сетваме автоматично, кога даден запис в базата е бил създаден, кога е бил променян последно, ако е изтрит - кога е бил изтрит
+
+2. Миграции - в конзолата си избирам Default Project: MyForumSystem.Data. Това е мястото, в което се съхранява файла ApplicationDbContext.cs. Пиша Enable-Migrations. Във файла Configuration.cs задавам this.AutomaticMigrationsEnabled = true;
+Слагам още //TODO: Remove in productions
+            this.AutomaticMigrationDataLossAllowed = true;
+което позволява, по време на работа да се губят данни от базата при промени, и да не ме занимава постоянно с тоя проблем.
+Това TODO ще ми излиза в Task List-a като задача, която накрая трябва да оправя.
