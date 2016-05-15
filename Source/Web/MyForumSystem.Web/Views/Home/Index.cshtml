@@ -7,39 +7,39 @@
     @foreach (var post in Model)
     {
         <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.Title)
-            </dt>
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Title)
+                </dt>
 
-            <dd>
-                @Html.DisplayFor(model => post.Title)
-            </dd>
+                <dd>
+                    @Html.DisplayFor(model => post.Title)
+                </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.PreserveCreatedOn)
-            </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.PreserveCreatedOn)
+                </dt>
 
-            <dd>
-                @Html.DisplayFor(model => post.PreserveCreatedOn)
-            </dd>
+                <dd>
+                    @Html.DisplayFor(model => post.PreserveCreatedOn)
+                </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.ModifiedOn)
-            </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.ModifiedOn)
+                </dt>
 
-            <dd>
-                @Html.DisplayFor(model => post.ModifiedOn)
-            </dd>
+                <dd>
+                    @Html.DisplayFor(model => post.ModifiedOn)
+                </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.IsDeleted)
-            </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.IsDeleted)
+                </dt>
 
-            <dd>
-                @Html.DisplayFor(model => post.IsDeleted)
-            </dd>
+                <dd>
+                    @Html.DisplayFor(model => post.IsDeleted)
+                </dd>
 
-        </dl>
+            </dl>
     }
 </div>
