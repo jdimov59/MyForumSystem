@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MyForumSystem.Data.Models.Post>
+﻿@model IEnumerable<MyForumSystem.Web.ViewModels.IndexBlogPostViewModel>
 @{
     ViewBag.Title = "Home Page";
 }
@@ -7,16 +7,16 @@
     @foreach (var post in Model)
     {
         <hr />
-            <dl class="dl-horizontal">
-                <dt>
-                    @Html.DisplayNameFor(model => model.Title)
-                </dt>
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
 
-                <dd>
-                    @Html.DisplayFor(model => post.Title)
-                </dd>
+            <dd>
+                @Html.DisplayFor(model => post.Title)
+            </dd>
 
-                <dt>
+            @*<dt>
                     @Html.DisplayNameFor(model => model.PreserveCreatedOn)
                 </dt>
 
@@ -30,16 +30,16 @@
 
                 <dd>
                     @Html.DisplayFor(model => post.ModifiedOn)
-                </dd>
+                </dd>*@
 
-                <dt>
-                    @Html.DisplayNameFor(model => model.IsDeleted)
-                </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.IsDeleted)
+            </dt>
 
-                <dd>
-                    @Html.DisplayFor(model => post.IsDeleted)
-                </dd>
+            <dd>
+                @Html.DisplayFor(model => post.IsDeleted)
+            </dd>
 
-            </dl>
+        </dl>
     }
 </div>
