@@ -48,6 +48,10 @@
       <HintPath>..\..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="AutoMapper, Version=4.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AutoMapper.4.2.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -286,6 +290,10 @@
     <ProjectReference Include="..\..\Data\MyForumSystem.Data\MyForumSystem.Data.csproj">
       <Project>{57723b34-3fef-449e-8510-c213e7a292d0}</Project>
       <Name>MyForumSystem.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyForumSystem.Web.Infrastructure\MyForumSystem.Web.Infrastructure.csproj">
+      <Project>{37f86e99-f06c-40a8-8f3c-8aa6b89ccc17}</Project>
+      <Name>MyForumSystem.Web.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
