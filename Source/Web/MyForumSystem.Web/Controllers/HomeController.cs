@@ -17,9 +17,9 @@
 
         public ActionResult Index()
         {
-            this.posts.Delete(12);
+            //this.posts.Delete(12);
             //this.posts.ActualDelete(this.posts.GetById(8));
-            this.posts.SaveChanges();
+            //this.posts.SaveChanges();
             var model = this.posts.All().ProjectTo<IndexBlogPostViewModel>();
 
             return this.View(model);

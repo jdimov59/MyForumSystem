@@ -8,7 +8,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using MyForumSystem.Web.Models;
+using MyForumSystem.Web.ViewModels;
 using MyForumSystem.Data.Models;
 
 namespace MyForumSystem.Web.Controllers
