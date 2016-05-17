@@ -21,7 +21,8 @@ namespace MyForumSystem.Web.Controllers
         [HttpGet]
         public ActionResult Ask()
         {
-            return Content("Ask GET");
+            var model = new AskInputModel();
+            return this.View(model);
         }
 
         [HttpPost]
