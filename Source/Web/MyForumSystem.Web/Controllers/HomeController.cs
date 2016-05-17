@@ -8,15 +8,18 @@
     using ViewModels;
     public class HomeController : Controller
     {
-        private IRepository<Post> posts;
+        private IDeletableEntityRepository<Post> posts;
 
-        public HomeController(IRepository<Post> posts)
+        public HomeController(IDeletableEntityRepository<Post> posts)
         {
             this.posts = posts;
         }
 
         public ActionResult Index()
         {
+            this.posts.Delete(12);
+            //this.posts.ActualDelete(this.posts.GetById(8));
+            this.posts.SaveChanges();
             var model = this.posts.All().ProjectTo<IndexBlogPostViewModel>();
 
             return this.View(model);
