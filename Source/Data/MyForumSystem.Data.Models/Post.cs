@@ -11,6 +11,8 @@ namespace MyForumSystem.Data.Models
         [MaxLength(100)]
         public string Title { get; set; }
 
+        public string Content { get; set; }
+
         public bool IsDeleted { get; set; }
 
         public DateTime? DeletedOn { get; set; }

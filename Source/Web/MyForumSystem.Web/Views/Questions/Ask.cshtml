@@ -4,25 +4,41 @@
 }
 
 <h1>@ViewBag.Title</h1>
+<hr />
 @using (Html.BeginForm("Ask", "Questions", FormMethod.Post))
 {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+
     <div class="row">
-        @Html.LabelFor(model => model.Title)
-        <br />
-        @Html.EditorFor(model => model.Title)
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.Title, new { @class = "my-labels" })
+        </div>
+        <div class="col-md-11">
+            @Html.EditorFor(model => model.Title, new { placeholder = "Ask Title" })
+        </div>
+        @*@Html.ValidationMessageFor(model => model.Title)*@
     </div>
     <br />
 
     <div class="row">
-        @Html.LabelFor(model => model.Content)
         @Html.EditorFor(model => model.Content)
     </div>
     <br />
+    <div class="row">
+        <div class="col-md-1">
+                @Html.LabelFor(model => model.Tags, new { @class = "my-labels" })
+        </div>
+        <div class="col-md-11">
+            @Html.EditorFor(model => model.Tags, new { placeholder = "at least one tag, max 5 tags, separated by comma" })
+        </div>
+    </div>
+    <br />
 
     <div class="row">
-        @Html.LabelFor(model => model.Tags)
-        <br />
-        @Html.EditorFor(model => model.Tags)
+        <div class="col-md-1 col-md-offset-6">
+            <input type="submit" class="btn btn-primary btn-lg" value="Ask question" />
+        </div>
     </div>
 }
 
