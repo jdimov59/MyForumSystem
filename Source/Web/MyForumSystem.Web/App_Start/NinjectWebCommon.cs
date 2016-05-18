@@ -14,6 +14,7 @@ namespace MyForumSystem.Web.App_Start
     using Data;
     using Data.Common.Repository;
     using Data.Models;
+    using Infrastructure;
     public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
@@ -68,6 +69,7 @@ namespace MyForumSystem.Web.App_Start
             kernel.Bind(typeof(IRepository<Post>)).To(typeof(DeletableEntityRepository<Post>));
             kernel.Bind(typeof(IDeletableEntityRepository<>)).To(typeof(DeletableEntityRepository<>));
             kernel.Bind(typeof(IRepository<>)).To(typeof(GenericRepository<>));
+            kernel.Bind<ISanitizer>().To<HtmlAgilityPackSanitizer>();
         }        
     }
 }
