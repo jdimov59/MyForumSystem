@@ -69,7 +69,7 @@ namespace MyForumSystem.Web.App_Start
             kernel.Bind(typeof(IRepository<Post>)).To(typeof(DeletableEntityRepository<Post>));
             kernel.Bind(typeof(IDeletableEntityRepository<>)).To(typeof(DeletableEntityRepository<>));
             kernel.Bind(typeof(IRepository<>)).To(typeof(GenericRepository<>));
-            kernel.Bind<ISanitizer>().To<HtmlAgilityPackSanitizer>();
+            kernel.Bind<ISanitizer>().To<HtmlSanitizerAdapter>();
         }        
     }
 }
